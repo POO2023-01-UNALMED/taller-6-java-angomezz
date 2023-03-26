@@ -13,7 +13,7 @@ public class Automovil extends Vehiculo {
 
 
     public int getPuestos(){
-        return puestos;
+        return this.puestos;
     }
     public void setPuestos(int puestos){
         this.puestos = puestos;

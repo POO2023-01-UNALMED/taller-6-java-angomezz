@@ -12,7 +12,7 @@ public class Pais {
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -24,13 +24,7 @@ public class Pais {
     public void setCanVehiculos(int v) {
         canVehiculos = v;
     }
-
-    public String getPais() {
-        return pais;
-    }
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
+    
 
     public static Pais paisMasVendedor(){
        Pais masVendedor = null;
