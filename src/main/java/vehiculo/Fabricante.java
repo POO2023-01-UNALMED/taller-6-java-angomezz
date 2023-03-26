@@ -8,10 +8,47 @@ public class Fabricante {
     private static ArrayList<Fabricante> listaDeFabricantes = new ArrayList<Fabricante>();
 
 
-    public Fabricante(String nombre, Pais pais);
-    this.nombre = nombre;
-    this.pais = pais;
+    public Fabricante(String nombre, Pais pais){
+        this.nombre =nombre;
+        this.pais =pais;
+        listaDeFabricantes.add(this);
+    }
 
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public int getCanVehiculos() {
+        return canVehiculos;
+    }
+    public void setCanVehiculos(int ve) {
+        canVehiculos = ve;
+    }
+
+    public static Fabricante fabricaMayorVentas(){
+        Fabricante fVendedor = null;
+        int primero = 0;
+        for (int i = 0; i < listaDeFabricantes.size(); i++){
+            if (listaDeFabricantes.get(i).getCanVehiculos() > primero){
+                fVendedor = listaDeFabricantes.get(i);
+                primero = listaDeFabricantes.get(i).getCanVehiculos();
+            }
+        }
+        return fVendedor;
+
+
+    }
+}
 
 
 
