@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Pais {
     private String nombre;
     private int canVehiculos;
-    private static ArrayList<Pais> listaDePaises = new Arraylist<Pais>();
+    private static ArrayList<Pais> listaDePaises = new ArrayList<Pais>();
 
     public Pais(String nombre){
         this.nombre = nombre;
@@ -24,7 +24,7 @@ public class Pais {
     public void setCanVehiculos(int v) {
         canVehiculos = v;
     }
-    
+
 
     public static Pais paisMasVendedor(){
        Pais masVendedor = null;
